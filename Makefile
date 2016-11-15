@@ -6,7 +6,7 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2016/11/15 11:20:23 by gcadiou          ###   ########.fr        #
+#    Updated: 2016/11/15 11:43:44 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ lib.a:
 	ranlib $(NAME)
 
 clean:
-	rm *o
+	rm *.o
 
 fclean: clean
 	rm $(NAME)

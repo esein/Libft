@@ -6,13 +6,13 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:11:03 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/10 09:49:10 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/15 11:37:14 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(char *big, char *little, size_t len)
+char	*ft_strnstr(char *big, char *little, size_t len)
 {
 	int		i_b;
 	int		i_l;
