@@ -6,27 +6,26 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2016/11/15 11:43:44 by gcadiou          ###   ########.fr        #
+#    Updated: 2016/11/15 12:00:00 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = src/ft*.c
+SRC = src/
 
 all: compil.o lib.a
 
 compil.o:
-	gcc -c $(SRC) -I ./
+	gcc -c $(SRC)*.c -I ./
 
 lib.a:
-	ar rc $(NAME) *.o
-	ranlib $(NAME)
+	ar rc $(NAME) ./*.o
 
 clean:
-	rm *.o
+	rm -f *.o
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
