@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/10 10:40:17 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/15 09:04:11 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int		ft_atoi(char *str);
 
-char *ft_strcat(char *dest, char *src);
+char	*ft_strcat(char *dest, char *src);
 
 int		ft_strcmp(char *s1, char *s2);
 
-char *ft_strcpy(char *dest, char *src);
+char	*ft_strcpy(char *dest, char *src);
 
 char	*ft_strdup(char *src);
 
