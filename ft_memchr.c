@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 10:37:46 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/15 16:24:50 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/11/17 15:47:23 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/11/17 15:59:38 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if ('A' <= c && c <= 'Z')
-		c += 32;
-	return (c);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((char *)s)[i] == c)
+			return ((void *)&s[i]);
+		i++;
+	}
+	return (NULL);
 }
-
-

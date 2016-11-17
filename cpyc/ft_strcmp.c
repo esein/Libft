@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 10:37:46 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/15 16:24:50 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/08/17 00:25:02 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/11/10 07:58:46 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+int		ft_strcmp(char *s1, char *s2)
 {
-	if ('A' <= c && c <= 'Z')
-		c += 32;
-	return (c);
+	int		count;
+	int		vs1;
+	int		vs2;
+
+	vs1 = 0;
+	vs2 = 0;
+	count = 0;
+	while (s1[count] != '\0' || s2[count] != '\0')
+	{
+		if (s1[count] != s2[count])
+			return (s1[count] - s2[count]);
+		count++;
+	}
+	return (0);
 }
-
-

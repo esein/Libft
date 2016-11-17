@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 06:18:18 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/10 09:23:19 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/17 11:30:40 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	int		i;
 
 	i = 0;
-	if (ft_strlen(s) < (n - 1))
-		return(0);
 	while (i < n)
 	{
 		((char *)s)[i] = c;
@@ -26,3 +24,4 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+

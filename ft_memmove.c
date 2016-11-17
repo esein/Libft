@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 10:37:46 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/15 16:24:50 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/11/17 14:30:52 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/11/17 15:39:33 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if ('A' <= c && c <= 'Z')
-		c += 32;
-	return (c);
+	char	tmp[n];
+
+	ft_memcpy(tmp, src, n);
+	return (ft_memcpy(dest, tmp, n));
 }
-
-
