@@ -1,27 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/17 01:07:09 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/18 18:16:56 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/11/18 20:30:41 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/11/18 20:40:11 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	count;
+	size_t	is;
+	size_t	in;
+	size_t	lens1;
+	size_t	lens2;
+	char	*new;
 
-	count = 0;
-	while (count < n && (s1[count] != '\0' || s2[count] !='\0'))
+	is = 0;
+	in = 0;
+	lens1 = strlen(s1);
+	lens2 = strlen(s2);
+	if (!(new = malloc(sizeof(char) * (lens1 + lens2 + 1))))
+		return (0);
+	while (is < lens1)
 	{
-		if ((unsigned char)s1[count] != (unsigned char)s2[count])
-			return ((unsigned char)s1[count] - (unsigned char)s2[count]);
-		count++;
+		new[in] = s1[is];
+		is++;
+		in++;
 	}
-	return (0);
+	is = 0;
+	while (is < lens2)
+	{
+		new[in] = s2[is];
+		is++;
+		in++;
+	}
+	new[in] = '\0';
+	return (new);
 }

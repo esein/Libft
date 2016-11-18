@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/18 20:17:39 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/18 21:10:23 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
+
+#define ISSPACE(s, i) s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
 
 void	ft_putchar(char c);
 
@@ -31,7 +33,7 @@ char	*ft_strcat(char *dest, char *src);
 
 int		ft_strcmp(const char *s1, const char *s2);
 
-char	*ft_strcpy(char *dest, char *src);
+char	*ft_strcpy(char *dest, const char *src);
 
 char	*ft_strdup(char *src);
 
@@ -39,7 +41,7 @@ char	*ft_strncat(char *dest, char *src, size_t nb);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n);
+char	*ft_strncpy(char *dest, const char *src, unsigned int n);
 
 char	*ft_strstr(char *str, char *to_find);
 
@@ -98,4 +100,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(char const *s1, char const *s2);
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*ft_strtrim(char const *s);
 #endif

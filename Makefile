@@ -6,7 +6,7 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2016/11/18 20:16:42 by gcadiou          ###   ########.fr        #
+#    Updated: 2016/11/18 21:10:00 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,10 @@ SRC = ft_atoi.c    \
 	  ft_strmapi.c \
 	  ft_strequ.c  \
 	  ft_strnequ.c \
+	  ft_strsub.c  \
+	  ft_strjoin.c \
+	  ft_strtrim.c \
+
 
 #	  ft_putchar.c \
 	  ft_putstr.c  \

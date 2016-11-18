@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/17 01:07:09 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/18 18:16:56 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/11/18 20:20:13 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/11/18 20:29:17 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t	count;
+	size_t	i;
+	char	*new;
 
-	count = 0;
-	while (count < n && (s1[count] != '\0' || s2[count] !='\0'))
+	i = 0;
+	if (!(new = malloc(sizeof(char) * (len + 1))))
+		return (0);
+	while (i < len)
 	{
-		if ((unsigned char)s1[count] != (unsigned char)s2[count])
-			return ((unsigned char)s1[count] - (unsigned char)s2[count]);
-		count++;
+		new[i] = s[start];
+		i++;
+		start++;
 	}
-	return (0);
+	new[i] = '\0';
+	return (new);
 }
