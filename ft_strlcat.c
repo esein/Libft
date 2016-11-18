@@ -6,42 +6,32 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 01:00:18 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/15 17:43:38 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/18 15:53:34 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t		ft_strlcat(char *dst,const char *src, size_t size)
 {
-	int		i_d;
-	int		i_s;
+	size_t	i_d;
+	size_t	i_s;
+	size_t	lendst;
 
-	if (ft_strlen(dst)  > (size -1))
-		return (ft_strlen((char *)src) + size);
-	i_d = ft_strlen(dst);
 	i_s = 0;
-	while (src[i_s] && (i_s < (size + 1 - ft_strlen(dst))))
+	lendst = strlen(dst);
+	i_d = lendst;
+	if (strlen(dst) < size)
 	{
-		dst[i_d] = src[i_s];
-		i_d++;
-		i_s++;
+		while (i_d < size - 1)
+		{
+			dst[i_d] = src[i_s];
+			i_d++;
+			i_s++;
+		}
+		dst[i_d] = '\0';
+		return (strlen(src) + lendst);
 	}
-	return (ft_strlen(dst) + ft_strlen((char *)src));
-}
-
-int	main(void)
-{
-	char *src = "thx to ntoniolo for this test !";
-	char dst[4] = "";
-	char *src2 = "";
-	char dst2[4] = "";
-
-	printf("%d\n",ft_strlen(dst));
-	printf("%lu\n",ft_strlcat(dst, src, 4));
-	printf("%s\n",dst);
-	printf("%lu\n",strlcat(dst2, src2, 4));
-	printf("%s\n",dst2);
+	else
+		return (strlen(src) + size);
 }

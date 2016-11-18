@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:11:03 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/15 11:37:14 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/17 19:09:56 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 	int		tmp;
 
 	i_b = 0;
+	if (!little[0])
+		return (big);
 	while (big[i_b])
 	{
 		if (big[i_b] == little[0])
@@ -38,3 +40,11 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 	}
 	return (0);
 }
+/*
+int main()
+{
+	printf("%s\n",ft_strnstr("abcde","abcde",5));
+	printf("%s\n",strnstr("abcde","abcde",5));
+	return (0);
+}
+*/

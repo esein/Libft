@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 23:01:15 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/10 09:20:40 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/17 18:37:08 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strstr(char *str, char *to_find)
 	int a;
 
 	count = 0;
+	if (!to_find[0])
+		return (str);
 	while (str[count] != '\0')
 	{
 		if (str[count] == to_find[0])

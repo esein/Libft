@@ -6,7 +6,7 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2016/11/17 16:20:54 by gcadiou          ###   ########.fr        #
+#    Updated: 2016/11/18 20:16:42 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,21 @@ SRC = ft_atoi.c    \
 	  ft_memmove.c \
 	  ft_memchr.c  \
 	  ft_memcmp.c  \
+	  ft_memalloc.c\
+	  ft_memdel.c  \
+	  ft_strnew.c  \
+	  ft_strdel.c  \
+	  ft_strclr.c  \
+	  ft_striter.c \
+	  ft_striteri.c\
+	  ft_strmap.c  \
+	  ft_strmapi.c \
+	  ft_strequ.c  \
+	  ft_strnequ.c \
+
+#	  ft_putchar.c \
+	  ft_putstr.c  \
+	  ft_putnbr.c  \
 
 all: $(NAME)
 

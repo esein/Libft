@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 00:44:12 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/10 09:16:27 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/17 18:29:41 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (tmp != 0)
 		return ((char *) &s[tmp]);
+	else if (s[i] == c)
+		return ((char *)&s[i]);
 	else
 		return (0);
 }
