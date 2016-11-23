@@ -1,22 +1,26 @@
-#include <string.h>
-#include <stdio.h>
-#include "libft.h"
-int	main(void)
+
+char		*ft_itoa(int n)
 {
-	int		lol;
-	char dst[50] = "";
-	char *src = "";
-	
-	int		lol2;
-	char dst2[50] = "";
-	char *src2 = "";
-
-	lol = strlcat(dst,src, 0);
-	printf("%s\n",dst);
-	printf("%d\n",lol);
-	lol2 = ft_strlcat(dst2,src2, 0);
-	printf("%s\n",dst);
-	printf("%d",lol);
-	return (0);
+    int				i;
+    unsigned int	x;
+    int				sign;
+    char			*buf;
+    
+    buf = ft_strnew(ft_countchars(n));
+    x = n;
+    if ((sign = n) < 0)
+        x = -n;
+    i = 0;
+    if (x == 0)
+        buf[i++] = '0';
+    while (x > 0)
+    {
+        buf[i++] = x % 10 + '0';
+        x /= 10;
+    }
+    if (sign < 0)
+        buf[i++] = '-';
+    buf[i] = '\0';
+    ft_strrev(buf);
+    return (buf);
 }
-
