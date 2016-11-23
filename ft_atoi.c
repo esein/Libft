@@ -6,13 +6,13 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 13:45:41 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/10 07:58:08 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/23 22:04:45 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	boucles(char *str, int compteur, long nbr)
+static long	boucles(const char *str, int compteur, long nbr)
 {
 	int		negative;
 
@@ -40,7 +40,7 @@ long	boucles(char *str, int compteur, long nbr)
 	return (nbr);
 }
 
-int		ft_atoi(char *str)
+int			ft_atoi(const char *str)
 {
 	int		compteur;
 	long	nbr;

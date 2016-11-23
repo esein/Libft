@@ -6,7 +6,7 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2016/11/23 21:36:16 by gcadiou          ###   ########.fr        #
+#    Updated: 2016/11/23 22:06:30 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,8 @@ SRC = ft_atoi.c       \
 	  ft_putstr.c     \
 	  ft_putendl.c    \
 	  ft_putnbr.c     \
-	  ft_putchar_fd   \
+	  ft_putchar_fd.c \
+	  ft_putstr_fd.c  \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c  \
 
