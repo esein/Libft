@@ -6,13 +6,13 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/17 07:32:11 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/10 07:58:29 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/23 23:26:40 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int		count;
 	int		count2;

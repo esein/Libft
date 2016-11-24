@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/23 21:57:00 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/24 06:43:11 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 
 #define ISSPACE(s, i) s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
 
+typedef struct	s_list
+{
+	void	*content;
+	size_t	content_size;
+	struct s_list *next;
+}				t_list;
+
 void	ft_putchar(char c);
 
 void	ft_putstr(char const *s);
@@ -29,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int		ft_atoi(const char *str);
 
-char	*ft_strcat(char *dest, char *src);
+char	*ft_strcat(char *dest, const char *src);
 
 int		ft_strcmp(const char *s1, const char *s2);
 
@@ -37,13 +44,13 @@ char	*ft_strcpy(char *dest, const char *src);
 
 char	*ft_strdup(const char *src);
 
-char	*ft_strncat(char *dest, char *src, size_t nb);
+char	*ft_strncat(char *dest, const char *src, size_t nb);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 char	*ft_strncpy(char *dest, const char *src, unsigned int n);
 
-char	*ft_strstr(char *str, char *to_find);
+char	*ft_strstr(const char *str, const char *to_find);
 
 void	*ft_memset(void *s, int c, size_t n);
 
@@ -51,7 +58,7 @@ char	*ft_strchr(const char *s, int c);
 
 char	*ft_strrchr(const char *s, int c);
 
-char	*ft_strnstr(char *big, char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 int		ft_isalpha(int c);
 
@@ -122,5 +129,7 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
+
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 #endif

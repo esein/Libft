@@ -6,7 +6,7 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2016/11/23 22:06:30 by gcadiou          ###   ########.fr        #
+#    Updated: 2016/11/24 06:39:19 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,11 +64,12 @@ SRC = ft_atoi.c       \
 	  ft_putstr_fd.c  \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c  \
+	  ft_lstnew.c     \
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC)
+	gcc -Wall -Werror -Wextra -c $(SRC)
 	ar -rc $(NAME) $(SRC:.c=.o)
 
 clean:

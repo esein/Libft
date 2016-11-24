@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 20:05:47 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/18 20:07:48 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/24 04:42:36 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i])
 	{
-		new[i] = f(s[i], i);
+		new[i] = f((unsigned int)i, (char)s[i]);
 		i++;
 	}
 	new[i] = '\0';

@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/17 08:28:07 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/23 23:26:48 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/11/24 06:00:01 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/11/24 07:23:12 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t nb)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t	count;
-	size_t	count2;
+	t_list	*new;
 
-	count = 0;
-	count2 = 0;
-	while (dest[count] != '\0')
-		count++;
-	while ((count2 < nb) && (src[count2]))
+	new = NULL;
+	if (!(new = malloc(sizeof(*new))))
+		return (NULL);
+	if (content)
 	{
-		dest[count + count2] = src[count2];
-		count2++;
+		new->content = (void *)content;
+		new->content_size = content_size;
 	}
-	dest[count + count2] = '\0';
-	return (dest);
+	else
+	{
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	new->next = NULL;
+	return (new);
 }
