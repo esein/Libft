@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:11:03 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/25 01:31:10 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/25 08:18:00 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *big, const char *lil, size_t len)
 			{
 				i_b++;
 				i_l++;
-				if (lil[i_l] == '\0' || i_l == len)
+				if (lil[i_l] == '\0')
 					return ((char *)big + i_b - i_l);
 			}
 			i_b = tmp;

@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 20:42:42 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/23 22:11:23 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/25 08:36:11 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char		*ft_strtrim(char const *s)
 
 	i_n = 0;
 	i_s = 0;
+	if (!s)
+		return (NULL);
 	lennew = ft_strlen(s) - calcul_spaces(s);
 	i_s = 0;
 	if (!(new = malloc(sizeof(char) * (lennew + 1))))

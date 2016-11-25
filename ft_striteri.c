@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 19:30:28 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/18 19:33:39 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/25 01:44:44 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = 0;
+	if (!s || !f)
+		return ((void)NULL);
 	while (s[i])
 	{
 		f(i, &s[i]);

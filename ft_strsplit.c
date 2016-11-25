@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 13:16:52 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/25 01:19:18 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/25 08:38:27 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		nbwords;
 	int		numwords;
 
+	if (!s)
+		return (NULL);
 	nbwords = calcnbwords(s, c);
 	if (!(tab = (char **)malloc(sizeof(*tab) * (nbwords + 1))))
 		return (NULL);
