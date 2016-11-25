@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 06:00:01 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/24 07:23:12 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/24 23:24:00 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	t_list	*new;
 
 	new = NULL;
-	if (!(new = malloc(sizeof(*new))))
+	if (!(new = malloc(sizeof(t_list))))
 		return (NULL);
 	if (content)
 	{

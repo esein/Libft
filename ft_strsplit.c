@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 13:16:52 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/21 17:43:16 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/25 01:19:18 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,11 @@ static int	calcnbwords(char const *s, char c)
 
 static char	**filltab(char **tab, char const *s, char c, int numwords)
 {
-	size_t	is;
 	int		it1;
-	size_t	it2;
 
+	DECLAR2;
 	is = 0;
 	it1 = 0;
-	it2 = 0;
 	while (it1 != numwords)
 	{
 		while (s[is] && s[is] == c)
@@ -64,7 +62,8 @@ static char	**filltab(char **tab, char const *s, char c, int numwords)
 	}
 	while (s[is] == c && s[is])
 		is++;
-	tab[numwords] = (char *)malloc(sizeof(char) * strlentil(s, c, is) + 1);
+	if (!(tab[numwords] = MALLOCGRAT))
+		return (0);
 	while (s[is] != c && s[is])
 	{
 		tab[numwords][it2] = s[is];
@@ -82,7 +81,7 @@ char		**ft_strsplit(char const *s, char c)
 	int		numwords;
 
 	nbwords = calcnbwords(s, c);
-	if(!(tab = (char **)malloc(sizeof(*tab) * (nbwords + 1))))
+	if (!(tab = (char **)malloc(sizeof(*tab) * (nbwords + 1))))
 		return (NULL);
 	numwords = 0;
 	while (numwords < nbwords)

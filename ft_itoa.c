@@ -6,13 +6,13 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 17:43:49 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/23 20:00:13 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/25 00:31:10 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strrev(char *s)
+static char		*ft_strrev(char *s)
 {
 	size_t	size;
 	size_t	size2;
@@ -56,7 +56,20 @@ static size_t	nbchar(long nb)
 	return (count);
 }
 
-char		*ft_itoa(int n)
+static void		vivelanorme(char *s, int x, size_t i, long nb)
+{
+	while (nb > 0)
+	{
+		s[i] = (nb % 10) + 48;
+		nb /= 10;
+		i++;
+	}
+	if (x == -1)
+		s[i] = '-';
+	ft_strrev(s);
+}
+
+char			*ft_itoa(int n)
 {
 	int		x;
 	size_t	i;
@@ -68,24 +81,14 @@ char		*ft_itoa(int n)
 	i = 0;
 	if (!(s = ft_strnew(nbchar(nb))))
 		return (NULL);
-	if (nb  < 0)
+	if (nb < 0)
 	{
 		x = -1;
 		nb = -nb;
 	}
-	if(nb == 0)
+	if (nb == 0)
 		s[0] = '0';
 	else
-	{
-		while (nb > 0)
-		{
-			s[i] = (nb % 10) + 48;
-			nb /= 10;
-			i++;
-		}
-		if (x == -1)
-			s[i] = '-';
-		ft_strrev(s);
-	}
+		vivelanorme(s, x, i, nb);
 	return (s);
 }

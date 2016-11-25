@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 20:30:41 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/23 22:10:04 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/11/25 01:07:54 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	is;
-	size_t	in;
-	size_t	lens1;
-	size_t	lens2;
 	char	*new;
 
+	DECLAR;
 	is = 0;
 	in = 0;
 	lens1 = ft_strlen(s1);
