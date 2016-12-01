@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/25 01:29:45 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/12/01 06:41:44 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,9 +132,15 @@ void				ft_putchar_fd(char c, int fd);
 
 void				ft_putstr_fd(char const *s, int fd);
 
+void				ft_puterror(char const *s);
+
 void				ft_putendl_fd(char const *s, int fd);
 
 void				ft_putnbr_fd(int n, int fd);
+
+char				**ft_mal_double_tab(char **tab, size_t l, size_t i);
+
+void				ft_print_double_tab(char **tab, size_t l, size_t i);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 

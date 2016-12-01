@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 13:16:52 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/25 08:38:27 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/12/01 06:06:48 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,17 @@ static char	**filltab(char **tab, char const *s, char c, int numwords)
 	DECLAR2;
 	is = 0;
 	it1 = 0;
-	while (it1 != numwords)
+	while (it1++ != numwords)
 	{
 		while (s[is] && s[is] == c)
 			is++;
 		while (s[is] && s[is] != c)
 			is++;
-		it1++;
 	}
 	while (s[is] == c && s[is])
 		is++;
-	if (!(tab[numwords] = MALLOCGRAT))
+	if (!(tab[numwords] =
+				(char *)malloc(sizeof(char) * strlentil(s, c, is) + 1)))
 		return (0);
 	while (s[is] != c && s[is])
 	{

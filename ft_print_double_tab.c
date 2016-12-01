@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_print_double_tab.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 18:17:34 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/12/01 05:45:56 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/12/01 05:19:12 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/12/01 06:58:11 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_print_double_tab(char **tab, size_t l, size_t i)
 {
-	void	*mem;
+	size_t	i1;
+	size_t	i2;
 
-	if (!(mem = malloc(size)))
-		return (NULL);
-	ft_bzero(mem, size);
-	return (mem);
+	i1 = 0;
+	while (i1 < l)
+	{
+		i2 = 0;
+		while (i2 < i)
+		{
+			ft_putchar(tab[i1][i2]);
+			i2++;
+		}
+		ft_putchar('\n');
+		i1++;
+	}
 }

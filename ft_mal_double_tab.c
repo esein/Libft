@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_maltab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 18:17:34 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/12/01 05:45:56 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/12/01 05:48:19 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/12/01 07:00:55 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	**ft_mal_double_tab(char **tab, size_t l, size_t i)
 {
-	void	*mem;
+	size_t	count;
 
-	if (!(mem = malloc(size)))
+	count = 0;
+	if (!(tab = (char **)malloc(sizeof(char *) * l)))
 		return (NULL);
-	ft_bzero(mem, size);
-	return (mem);
+	while (count < l)
+	{
+		if (!(tab[count] = (char *)malloc(sizeof(char) * i)))
+			return (NULL);
+		count++;
+	}
+	return (tab);
 }

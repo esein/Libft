@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_puterror.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/18 18:17:34 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/12/01 05:45:56 by gcadiou          ###   ########.fr       */
+/*   Created: 2016/12/01 04:19:16 by gcadiou           #+#    #+#             */
+/*   Updated: 2016/12/01 04:32:22 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+static void	ft_putcharerror(char c)
 {
-	void	*mem;
+	write(2, &c, 1);
+}
 
-	if (!(mem = malloc(size)))
-		return (NULL);
-	ft_bzero(mem, size);
-	return (mem);
+void		ft_puterror(char const *s)
+{
+	int a;
+
+	a = 0;
+	while (s[a] != '\0')
+	{
+		ft_putcharerror(s[a]);
+		a++;
+	}
 }
