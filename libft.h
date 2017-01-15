@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/12/01 06:41:44 by gcadiou          ###   ########.fr       */
+/*   Updated: 2016/12/22 23:59:40 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,5 +143,9 @@ char				**ft_mal_double_tab(char **tab, size_t l, size_t i);
 void				ft_print_double_tab(char **tab, size_t l, size_t i);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
+
+int					ft_strlentil(const char *s, char c, size_t i);
+
+void				*ft_realloc(void *ptr, size_t size, size_t size_actual);
 
 #endif
