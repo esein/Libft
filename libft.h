@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/12/22 23:59:40 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/01/22 17:19:52 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include "get_next_line.h"
 
 # define ISSPACE(s, i) s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
 
