@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/02/12 20:19:07 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/02/12 21:53:53 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 
 void				ft_putstr_size(char const *s, int size);
+
+void				ft_put_nb_c(char c, int nb);
 
 int					ft_strlen(const char *s);
 
