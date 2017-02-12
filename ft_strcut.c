@@ -6,13 +6,13 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 18:53:30 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/02/12 16:20:08 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/02/12 17:03:36 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strcut(char *s, int start, int end)
+char	*ft_strcut(char *s, int start, int end)
 {
 	char	buf[ft_strlen(s) + 1];
 	int		i;
@@ -28,4 +28,5 @@ void	ft_strcut(char *s, int start, int end)
 		i2++;
 	}
 	s[i] = '\0';
+	return (s);
 }
