@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 17:17:41 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/01/22 17:20:38 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/01/24 17:23:34 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int		wicheone(int fd, t_gnl **gnl)
 	return (i);
 }
 
-void	vivelanorme(t_gnl *gnl)
+void	vivelanorme2(t_gnl *gnl)
 {
 	gnl->str_new = (char *)malloc(sizeof(char));
 	gnl->str_new[0] = '\0';
@@ -115,7 +115,7 @@ int		get_next_line(const int fd, char **line)
 	}
 	act = wicheone(fd, &gnl);
 	gnl[act].ret = 0;
-	vivelanorme(&(gnl[act]));
+	vivelanorme2(&(gnl[act]));
 	if (gnl[act].notfirst == 1)
 		if (old_to_new(&(gnl[act])))
 		{

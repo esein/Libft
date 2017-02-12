@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/01/22 17:19:52 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/02/12 16:20:38 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ typedef struct		s_list
 void				ft_putchar(char c);
 
 void				ft_putstr(char const *s);
+
+void				ft_putstr_size(char const *s, int size);
 
 int					ft_strlen(const char *s);
 
@@ -148,5 +150,7 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 int					ft_strlentil(const char *s, char c, size_t i);
 
 void				*ft_realloc(void *ptr, size_t size, size_t size_actual);
+
+void				ft_strcut(char *s, int start, int end);
 
 #endif
