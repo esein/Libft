@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/02/12 17:17:02 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/02/12 20:19:07 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,27 @@
 
 # define ISSPACE(s, i) s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
 
-# define DECLAR size_t	is,in,lens1,lens2;
+# define COLOR(param) ft_putstr(param)
 
-# define MALLOCGRAT (char *)malloc(sizeof(char) * strlentil(s, c, is) + 1)
+# define NONE		"\033[0m"
 
-# define DECLAR2 size_t is,it2 = 0;
+# define STRONG		"\033[1m"
+
+# define BLACK		"\033[30m"
+
+# define RED		"\033[31m"
+
+# define GREEN		"\033[32m"
+
+# define BROWN		"\033[33m"
+
+# define BLUE		"\033[34m"
+
+# define MAGENTA	"\033[35m"
+
+# define CYAN		"\033[36m"
+
+# define WHITE		"\033[37m"
 
 typedef struct		s_list
 {

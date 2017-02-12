@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 13:16:52 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/12/01 06:06:48 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/02/12 19:57:37 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,22 +45,34 @@ static int	calcnbwords(char const *s, char c)
 	return (nbwords);
 }
 
-static char	**filltab(char **tab, char const *s, char c, int numwords)
+static int	vivelanorme(char const *s, char c, int numwords)
 {
-	int		it1;
+	int		is;
+	int		it;
 
-	DECLAR2;
 	is = 0;
-	it1 = 0;
-	while (it1++ != numwords)
+	it = 0;
+	while (it++ != numwords)
 	{
-		while (s[is] && s[is] == c)
+		while (s[is] == c)
 			is++;
 		while (s[is] && s[is] != c)
 			is++;
 	}
-	while (s[is] == c && s[is])
+	while (s[is] == c)
 		is++;
+	return (is);
+}
+
+static char	**filltab(char **tab, char const *s, char c, int numwords)
+{
+	int		it1;
+	size_t	is;
+	size_t	it2;
+
+	it2 = 0;
+	it1 = 0;
+	is = vivelanorme(s, c, numwords);
 	if (!(tab[numwords] =
 				(char *)malloc(sizeof(char) * strlentil(s, c, is) + 1)))
 		return (0);
