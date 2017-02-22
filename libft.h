@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/02/12 21:53:53 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/02/22 02:06:05 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,28 @@
 # define STRONG		"\033[1m"
 
 # define BLACK		"\033[30m"
+# define S_BLACK	"\033[30;1m"
 
 # define RED		"\033[31m"
+# define S_RED		"\033[31;1m"
 
 # define GREEN		"\033[32m"
+# define S_GREEN	"\033[32;1m"
 
 # define BROWN		"\033[33m"
+# define S_BROWN	"\033[33;1m"
 
 # define BLUE		"\033[34m"
+# define S_BLUE		"\033[34;1m"
 
 # define MAGENTA	"\033[35m"
+# define S_MAGENTA	"\033[35;1m"
 
 # define CYAN		"\033[36m"
+# define S_CYAN		"\033[36;1m"
 
 # define WHITE		"\033[37m"
+# define S_WHITE	"\033[37;1m"
 
 typedef struct		s_list
 {
@@ -58,6 +66,8 @@ void				ft_putstr_size(char const *s, int size);
 void				ft_put_nb_c(char c, int nb);
 
 int					ft_strlen(const char *s);
+
+int					ft_intlen(int nb);
 
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 
