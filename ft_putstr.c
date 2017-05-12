@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/11 06:17:36 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/23 21:54:07 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/05/12 11:13:56 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_putstr(char const *s)
 {
-	int a;
+	int i;
 
-	a = 0;
-	while (s[a] != '\0')
-	{
-		ft_putchar(s[a]);
-		a++;
-	}
+	i = 0;
+	if (s)
+		while (s[i] != '\0')
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 }
