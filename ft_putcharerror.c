@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puterror.c                                      :+:      :+:    :+:   */
+/*   ft_putcharerror.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/01 04:19:16 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/05/15 16:40:12 by gcadiou          ###   ########.fr       */
+/*   Created: 2017/05/15 16:39:26 by gcadiou           #+#    #+#             */
+/*   Updated: 2017/05/15 16:40:05 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "Libft.h"
 
-void		ft_puterror(char const *s)
+void	ft_putcharerror(char c)
 {
-	int a;
-
-	a = 0;
-	while (s[a] != '\0')
-	{
-		ft_putcharerror(s[a]);
-		a++;
-	}
+	write(2, &c, 1);
 }
