@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/05/18 17:50:10 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/05/18 19:55:23 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@
 # define BLACK		"\033[30m"
 # define S_BLACK	"\033[30;1m"
 # define BLACK_B_WHITE		"\033[30;47m"
+# define BLACK_B_RED		"\033[30;41m"
+# define BLACK_B_GREEN		"\033[30;42m"
+# define BLACK_B_BROWN		"\033[30;43m"
+# define BLACK_B_CYAN		"\033[30;46m"
 # define S_BLACK_B_WHITE	"\033[30;47;1m"
 
 # define RED		"\033[31m"
@@ -51,10 +55,10 @@
 # define BLUE		"\033[34m"
 # define S_BLUE		"\033[34;1m"
 # define BLUE_B_WHITE		"\033[34;47m"
-# define BLUE_B_YELLOW		"\033[34;43m"
+# define BLUE_B_BROWN		"\033[34;43m"
 # define BLUE_B_CYAN		"\033[34;46m"
 # define S_BLUE_B_WHITE		"\033[34;47;1m"
-# define S_BLUE_B_YELLOW	"\033[34;43;1m"
+# define S_BLUE_B_BROWN	"\033[34;43;1m"
 
 # define MAGENTA	"\033[35m"
 # define S_MAGENTA	"\033[35;1m"
