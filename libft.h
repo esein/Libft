@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/05/18 19:55:23 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/09/10 21:03:36 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,6 +197,8 @@ void				ft_putnbr_fd(int n, int fd);
 char				**ft_mal_double_tab(char **tab, size_t l, size_t i);
 
 void				ft_print_double_tab(char **tab, size_t l, size_t i);
+
+void				ft_print_char_tab(char **tab);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 

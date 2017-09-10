@@ -6,7 +6,7 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2017/06/26 14:29:43 by gcadiou          ###   ########.fr        #
+#    Updated: 2017/09/10 21:04:11 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ SRC = ft_atoi.c       \
 	  ft_putstr_size.c      \
 	  ft_mal_double_tab.c   \
 	  ft_print_double_tab.c \
+	  ft_print_char_tab.c   \
 	  ft_putcharerror.c     \
 	  ft_puterror.c         \
 	  ft_strlentil.c        \
