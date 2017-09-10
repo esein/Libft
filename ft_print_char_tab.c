@@ -6,13 +6,13 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/10 21:00:01 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/09/10 21:03:11 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/09/10 21:20:38 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_char_tab(char **tab)
+void	ft_print_char_tab(char **tab, char c)
 {
 	size_t	i;
 
@@ -20,6 +20,7 @@ void	ft_print_char_tab(char **tab)
 	while (tab[i] != 0)
 	{
 		ft_putstr(tab[i]);
+		ft_putchar(c);
 		i++;
 	}
 }
