@@ -6,7 +6,7 @@
 #    By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 05:23:59 by gcadiou           #+#    #+#              #
-#    Updated: 2017/09/16 03:47:36 by gcadiou          ###   ########.fr        #
+#    Updated: 2017/09/18 10:58:46 by gcadiou          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRC = ft_atoi.c       \
 	  ft_strjoin.c    \
 	  ft_strtrim.c    \
 	  ft_strsplit.c   \
+	  ft_strsplit_whitespace.c   \
 	  ft_itoa.c       \
 	  ft_putchar.c    \
 	  ft_putstr.c     \
@@ -76,10 +77,17 @@ SRC = ft_atoi.c       \
 	  ft_puterror.c         \
 	  ft_strlentil.c        \
 	  ft_realloc.c          \
+	  ft_strcut_begin.c     \
+	  ft_strcpy_begin.c     \
+	  ft_strcut_until.c     \
+	  ft_strcpy_until.c     \
 	  ft_str_endcut.c       \
+	  ft_str_endcpy.c       \
 	  ft_str_endcut_until.c \
+	  ft_str_endcpy_until.c \
 	  ft_tablen.c           \
 	  check_malloc.c        \
+	  free_doubletab.c      \
 	  get_next_line.c       \
 	  norme_gnl.c
 

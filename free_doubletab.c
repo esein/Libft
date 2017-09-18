@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_endcut.c                                    :+:      :+:    :+:   */
+/*   free_doubletab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/22 08:29:32 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/09/18 10:22:17 by gcadiou          ###   ########.fr       */
+/*   Created: 2017/09/18 05:28:37 by gcadiou           #+#    #+#             */
+/*   Updated: 2017/09/18 05:32:12 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_str_endcut(char *s, int size)
+void	free_doubletab(char **tab)
 {
 	int		i;
-	char	*new;
 
-	i = ft_strlen(s) - size;
-	new = ft_strnew(i);
-	new = ft_strncpy(new, s, i);
-	new[i] = '\0';
-	free(s);
-	return (new);
+	i = 0;
+	while (tab[i] != 0)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }
