@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 10:50:35 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/09/18 11:06:12 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/09/23 17:07:46 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,14 @@
 
 char	*ft_str_endcpy_until(char *s, char c)
 {
-	char	*new;
 	int		i;
+	int		len;
+	char	*new;
 
-	i = 0;
-	while (s[i])
-		i++;
-	i--;
-	while (s[i] != c)
-	{
-		i--;
-		if (i < 0)
-			return (s);
-	}
-	if (!(new = (char*)ft_memalloc(sizeof(char) * (i + 2))))
-		return (0);
-	new = ft_strncpy(new, s, i + 1);
-	new[i + 1] = '\0';
+	i = ft_strlentil(s, c, 0);
+	len = ft_strlen(&(s[i]));
+	new = ft_memalloc(sizeof(char) * (len + 1));
+	check_malloc(new, "ft_strcut_until");
+	new = ft_strncpy(new, &(s[i]), len);
 	return (new);
 }
