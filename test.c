@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 00:21:17 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/09/25 15:18:54 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/09/25 22:23:52 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 	lol[4] = '2';
 	lol[5] = '5';
 	lol[6] = '\0';
-	ft_putendl(ft_strcpy_until(lol, '2'));
+	ft_putendl(ft_str_endcpy_until(lol, '2'));
 	free(lol);
 	return(1);
 }
