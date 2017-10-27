@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/10/02 17:53:14 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/10/27 18:18:37 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@
 # include <stdio.h>
 # include "get_next_line.h"
 
-# define ISSPACE(s, i) s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
+# define ISSPACE(s, i) s[i] == ' ' || s[i] == '\t'
+# define NOSPACE(s, i) s[i] != ' ' && s[i] != '\t'
+
+# define DOUBLEQUOTE(s, i) s[i] == '"'
 
 # define COLOR(param) ft_putstr(param)
 
@@ -185,6 +188,8 @@ char				**ft_strsplit(char const *s, char c);
 
 char				**ft_strsplit_whitespace(char const *s);
 
+char				**ft_parsecmd(char *cmd);
+
 char				*ft_itoa(int n);
 
 void				ft_putendl(char const *s);
@@ -195,7 +200,7 @@ void				ft_putchar_fd(char c, int fd);
 
 void				ft_putstr_fd(char const *s, int fd);
 
-void				ft_puterror(char const *s);
+int					ft_puterror(char const *s);
 
 void				ft_putendl_fd(char const *s, int fd);
 
