@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/10/27 18:18:37 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/10/27 21:31:52 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,6 +187,8 @@ char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 
 char				**ft_strsplit_whitespace(char const *s);
+
+int					ft_strsplit_atoi(int	**tab_int, char *s);
 
 char				**ft_parsecmd(char *cmd);
 
