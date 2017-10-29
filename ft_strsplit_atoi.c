@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 20:59:11 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/10/27 21:30:20 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/10/27 22:58:06 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		ft_strsplit_atoi(int **int_tab, char *s)
 	*int_tab = ft_memalloc(sizeof(int) * x);
 	while (char_tab[i])
 	{
-		*int_tab[i] = ft_atoi(char_tab[i]);
+		(*int_tab)[i] = ft_atoi(char_tab[i]);
 		i++;
 	}
 	return (x);
