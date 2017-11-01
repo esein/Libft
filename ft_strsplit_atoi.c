@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 20:59:11 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/10/27 22:58:06 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/11/01 04:38:55 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int		ft_strsplit_atoi(int **int_tab, char *s)
 	char	**char_tab;
 	int		i;
 	int		x;
+
 	if (!s)
 		return (0);
 	i = 0;
