@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 13:45:41 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/10/27 21:28:56 by gcadiou          ###   ########.fr       */
+/*   Updated: 2017/11/17 14:08:39 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ static long	boucles(const char *str, int compteur, long nbr)
 	negative = 1;
 	while (str[compteur] == 32 || str[compteur] == '\n' || str[compteur] == '\f'
 	|| str[compteur] == '\v' || str[compteur] == '\t' || str[compteur] == '\r')
-	{
 		compteur++;
-	}
 	if (str[compteur] == 43)
 		compteur++;
 	else if (str[compteur] == 45)
