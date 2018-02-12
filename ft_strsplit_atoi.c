@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 20:59:11 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/11/01 04:38:55 by gcadiou          ###   ########.fr       */
+/*   Updated: 2018/02/12 17:04:42 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int		calcul_nb_int(char *s)
 
 	x = 0;
 	i = 0;
-	while (ISSPACE(s, i))
+	while (ISSPACE(s[i]))
 		i++;
 	while (s[i])
 	{
-		while (NOSPACE(s, i) && s[i])
+		while (NOSPACE(s[i]) && s[i])
 			i++;
-		while (ISSPACE(s, i))
+		while (ISSPACE(s[i]))
 			i++;
 		x++;
 	}

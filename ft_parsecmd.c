@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/20 03:35:53 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/10/23 08:15:14 by gcadiou          ###   ########.fr       */
+/*   Updated: 2018/02/12 17:09:13 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		next_quote(char *cmd, int i)
 {
 	while (cmd[i])
 	{
-		if (DOUBLEQUOTE(cmd, i))
+		if (DOUBLEQUOTE(cmd[i]))
 			return (i + 1);
 		i++;
 	}
@@ -25,7 +25,7 @@ int		next_quote(char *cmd, int i)
 
 int		end_nospace(char *cmd, int i)
 {
-	while (NOSPACE(cmd, i) && cmd[i])
+	while (NOSPACE(cmd[i]) && cmd[i])
 		i++;
 	return (i);
 }
@@ -39,9 +39,9 @@ int		calcul_nb_args(char *cmd)
 	args = 0;
 	while (cmd[i])
 	{
-		while (ISSPACE(cmd, i))
+		while (ISSPACE(cmd[i]))
 			i++;
-		if (DOUBLEQUOTE(cmd, i))
+		if (DOUBLEQUOTE(cmd[i]))
 		{
 			if ((i = next_quote(cmd, i + 1)) == -1)
 				return (-1);
@@ -49,9 +49,9 @@ int		calcul_nb_args(char *cmd)
 				args++;
 			continue;
 		}
-		if (!(DOUBLEQUOTE(cmd, i)) && cmd[i])
+		if (!(DOUBLEQUOTE(cmd[i])) && cmd[i])
 			args++;
-		while (NOSPACE(cmd, i) && cmd[i] && !(DOUBLEQUOTE(cmd, i)))
+		while (NOSPACE(cmd[i]) && cmd[i] && !(DOUBLEQUOTE(cmd[i])))
 			i++;
 	}
 	return (args);
@@ -59,9 +59,9 @@ int		calcul_nb_args(char *cmd)
 
 int		fill_tab(char **tab, char *cmd, int args, int i)
 {
-	while (ISSPACE(cmd, i))
+	while (ISSPACE(cmd[i]))
 		i++;
-	if (DOUBLEQUOTE(cmd, i))
+	if (DOUBLEQUOTE(cmd[i]))
 	{
 		tab[args] = ft_strsub(cmd, i + 1, (next_quote(cmd, i + 1) - i) - 2);
 		i = next_quote(cmd, i + 1);

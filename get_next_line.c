@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/09 17:17:41 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/09/16 04:29:50 by gcadiou          ###   ########.fr       */
+/*   Updated: 2018/02/12 17:31:14 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int				old_to_new(t_gnl *gnl)
 	if (gnl->str_new)
 		free(gnl->str_new);
 	check_malloc(gnl->str_new = malloc(sizeof(char) *
-			(1 + ft_strlentil(gnl->str_old, '\n', 0))), "gnl: old_to_new");
+			(1 + ft_strlentil(gnl->str_old, '\n'))), "gnl: old_to_new");
 	while (gnl->str_old[i])
 	{
 		if ((gnl->ret = 1) && gnl->str_old[i] == '\n')

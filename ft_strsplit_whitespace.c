@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/16 05:33:43 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/09/25 15:25:08 by gcadiou          ###   ########.fr       */
+/*   Updated: 2018/02/12 17:29:42 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	strlentil(const char *s, size_t i)
 	size_t	count;
 
 	count = 0;
-	while (s[i] && !(ISSPACE(s, i)))
+	while (s[i] && !(ISSPACE(s[i])))
 	{
 		count++;
 		i++;
@@ -32,14 +32,14 @@ static int	calcnbwords(char const *s)
 
 	i = 0;
 	nbwords = 0;
-	if (ISSPACE(s, i))
+	if (ISSPACE(s[i]))
 		nbwords--;
 	while (s[i])
 	{
-		while (!(ISSPACE(s, i)) && s[i])
+		while (!(ISSPACE(s[i])) && s[i])
 			i++;
 		nbwords++;
-		while (ISSPACE(s, i))
+		while (ISSPACE(s[i]))
 			i++;
 	}
 	return (nbwords);
@@ -54,12 +54,12 @@ static int	vivelanorme(char const *s, int numwords)
 	it = 0;
 	while (it++ != numwords)
 	{
-		while (ISSPACE(s, is))
+		while (ISSPACE(s[is]))
 			is++;
-		while (s[is] && !(ISSPACE(s, is)))
+		while (s[is] && !(ISSPACE(s[is])))
 			is++;
 	}
-	while (ISSPACE(s, is))
+	while (ISSPACE(s[is]))
 		is++;
 	return (is);
 }
@@ -76,7 +76,7 @@ static char	**filltab(char **tab, char const *s, int numwords)
 	if (!(tab[numwords] =
 				(char *)malloc(sizeof(char) * strlentil(s, is) + 1)))
 		return (0);
-	while (!(ISSPACE(s, is)) && s[is])
+	while (!(ISSPACE(s[is])) && s[is])
 	{
 		tab[numwords][it2] = s[is];
 		is++;

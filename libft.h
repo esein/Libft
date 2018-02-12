@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 05:25:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/12/14 14:42:43 by gcadiou          ###   ########.fr       */
+/*   Updated: 2018/02/12 17:07:43 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 # include <stdio.h>
 # include "get_next_line.h"
 
-# define ISSPACE(s, i) s[i] == ' ' || s[i] == '\t'
-# define NOSPACE(s, i) s[i] != ' ' && s[i] != '\t'
+# define ISSPACE(c) c == ' ' || c == '\t'
+# define NOSPACE(c) c != ' ' && c != '\t'
 
-# define DOUBLEQUOTE(s, i) s[i] == '"'
+# define DOUBLEQUOTE(c) c == '"'
 
 /*
 ** DEFINES FOR TERMINAL COLOR OUTPUT
@@ -236,7 +236,7 @@ void				ft_print_int_tab(int **tab, int l, int i, char c);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 
-int					ft_strlentil(const char *s, char c, size_t i);
+int					ft_strlentil(const char *s, char c);
 
 void				*ft_realloc(void *ptr, size_t size, size_t size_actual);
 

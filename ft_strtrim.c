@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 20:42:42 by gcadiou           #+#    #+#             */
-/*   Updated: 2016/11/25 08:36:11 by gcadiou          ###   ########.fr       */
+/*   Updated: 2018/02/12 17:30:19 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	calcul_spaces(char const *s)
 
 	i_s = 0;
 	spaces = 0;
-	while (s[i_s] && ISSPACE(s, i_s))
+	while (s[i_s] && ISSPACE(s[i_s]))
 	{
 		spaces++;
 		i_s++;
@@ -29,7 +29,7 @@ static int	calcul_spaces(char const *s)
 		while (s[i_s])
 			i_s++;
 		i_s--;
-		while (ISSPACE(s, i_s))
+		while (ISSPACE(s[i_s]))
 		{
 			spaces++;
 			i_s--;
@@ -53,7 +53,7 @@ char		*ft_strtrim(char const *s)
 	i_s = 0;
 	if (!(new = malloc(sizeof(char) * (lennew + 1))))
 		return (0);
-	while (s[i_s] && ISSPACE(s, i_s))
+	while (s[i_s] && ISSPACE(s[i_s]))
 		i_s++;
 	while (i_n < lennew)
 	{

@@ -6,7 +6,7 @@
 /*   By: gcadiou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 10:56:10 by gcadiou           #+#    #+#             */
-/*   Updated: 2017/09/25 15:23:48 by gcadiou          ###   ########.fr       */
+/*   Updated: 2018/02/12 17:30:59 by gcadiou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strcpy_until(char *s, char c)
 	int		i;
 
 	i = 0;
-	if (!(new = (char*)ft_memalloc(sizeof(char) * (ft_strlentil(s, c, 0) + 1))))
+	if (!(new = (char*)ft_memalloc(sizeof(char) * (ft_strlentil(s, c) + 1))))
 		return (0);
 	while (s[i] != c)
 	{
